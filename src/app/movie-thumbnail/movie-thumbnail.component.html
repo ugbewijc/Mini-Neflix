@@ -1,0 +1,22 @@
+<input class="column" type="text"  [(ngModel)]="movieFilter.title" placeholder="Type to filter by name">
+
+<div *ngFor = "let movie of movieList | filterBy: movieFilter"  class="column is-4" >
+  <figure class="image is-1by1">
+    <img *ngIf="movie?.image.url" [src]="movie?.image.url" [alt]="movie?.title">
+    <figcaption class="is-overlay">
+      <span class="movie-title">{{movie?.title}}</span><br>
+      <span class="movie-year has-text-centered">{{movie?.releaseYear}}</span><br>
+      <div class=""></div>
+      <button class="" (click)="movieDetails.displayMovieDetails(movie)">Details</button>
+      <span class="" *ngIf="checkFavouriteMovie(movie?.id); else elseBlock">
+        <button class="favourite" (click)="removeFavouriteMovie(movie?.id)">Remove Favorite <span class=" active-favourite">&#9733;</span></button>
+      </span>
+
+      <ng-template #elseBlock>
+        <button class="favourite " (click)="addFavouriteMovie(movie?.id)">Add Favorite<span>&#9733;</span></button>
+      </ng-template>
+    </figcaption>
+  </figure>
+</div>
+
+<movie-details #movieDetails></movie-details>

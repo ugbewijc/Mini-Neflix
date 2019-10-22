@@ -1,0 +1,30 @@
+figure figcaption{
+  position: sticky;
+  background-color:rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 0 7px 0 4px;
+}
+.star{
+  font-size: 200%;
+  color: yellow;
+  /*orange*/
+}
+
+div{
+  display: inline-grid;
+}
+.movie-title{
+  font-size: x-large;
+}
+
+.movie-year{
+
+}
+.favourite{
+  float: right;
+}
+.active-favourite{
+  /*border: solid 8px yellow;*/
+  color: blue;
+  font-size: 14px;
+}

@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+.container {
+  background-color: #E6E6E6;
+  /*color: #fff; margin: 0 2em 0 2em;*/
+  padding-top: 2em;
+
+}
+
+.active{
+  border: solid 6px white;
+}

@@ -1,0 +1,29 @@
+<div class="modal" [ngClass]="{'is-active':isModalActive === true}">
+  <div class="modal-background" (click)="activateModal(false)"></div>
+  <div class="modal-content" >
+    <section class="modal-card-body">
+
+      <p class="image is-3by2">
+        <img *ngIf="details?.image.url" [src]="details?.image.url" [alt]="details?.title">
+      </p>
+      <article class="message-body">
+        <p class="subtitle">{{details?.title}} , {{details?.releaseYear}}</p>
+        <p>
+          {{details?.description}}
+        </p><br>
+        <div class="columns">
+          <span class="column is-half">
+            <h5>Ratings</h5>
+            {{details?.rating}}
+          </span>
+          <span class="column is-half">
+            <h5>Genre</h5>
+            {{details?.genre}}
+          </span>
+        </div>
+
+      </article>
+    </section>
+  </div>
+  <button class="modal-close is-large" aria-label="close" (click)="activateModal(false)"></button>
+</div>
