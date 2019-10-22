@@ -4,6 +4,7 @@ Mini Netflix application
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.5.
 
 ## Demo
+https://unruffled-mclean-153bb2.netlify.com/
 
 ## Getting Started
 
